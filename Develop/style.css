@@ -24,12 +24,21 @@ textarea{
 .description{
   white-space: pre-wrap;
 }
-
+/* .form-control{
+  height: 10rem;
+} */
 .time-block{
   text-align: center;
+  padding: 5%;
   border-radius: 15px;
-}
+  margin: 10%;
 
+}
+.list-group-item{
+  height: 5rem;
+  text-align: center;
+  
+}
 .row {
   white-space: pre-wrap;
   height: 80px;

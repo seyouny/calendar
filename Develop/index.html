@@ -28,11 +28,94 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
 
+    <div class= "time-block">
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="9"> 09 AM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="10">10 AM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="11">11 AM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="12">12 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="1"> 01 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg"value="2"> 02 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="3"> 03 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="4"> 04 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="5"> 05 PM</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+    <br></br>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+      console.log(moment());
+      var today = moment().format("dddd, MMMM Do YYYY");
+      console.log(today)
+      $("#currentDay").append(today)
+      console.log(moment().format("HH"))
+      var timetable = {};
+      
+      $(".btn").click(function(){
+        $(".form-control").each(function(index) {
+        timetable[index] = $(this).val();
+        for (i in timetable){
+          localStorage.setItem(i,timetable[i])
+      }});
+      })
+      localStorage.getItem()
+    </script>
   </body>
 </html>
