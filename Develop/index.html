@@ -74,7 +74,7 @@
     </div>
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg" value="3">11 PM</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="3">03 PM</span>
       </div>
       <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
       <a href="#" class="btn btn-primary">Save</a>
@@ -94,7 +94,10 @@
       <a href="#" class="btn btn-primary">Save</a>
     </div>
   </div>
-
+  <footer>
+    <a href="#" class="btn btn-primary" id= "clear">Clear All</a>
+  </footer>
+    <br></br>
     <br></br>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -109,6 +112,8 @@
       });
       //******** DONE ADDING FROM LOCAL STORAGE
 
+
+
       var storedTime = {};
       //*****CHANGING COLORS
       $(".input-group-text").each(function(index) {
@@ -116,12 +121,12 @@
         var strTime = storedTime[index][0] + storedTime[index][1];
         if (moment().format("hh A") === storedTime[index]){
           $(this).css("background-color","pink");
-
-
           }
       });
       console.log(moment().format("hh"))
       //***** DONE CHANGING COLORS
+
+
 
 
       // ADDING TODAY'S DATE***************************
@@ -132,19 +137,29 @@
 
 
 
-
       // Button to store input items
       $(".btn").click(function(){
         $(".form-control").each(function(index) {
         timetable[index] = $(this).val();
         $(this).text(localStorage[index])
         for (i in timetable){
-          console.log(timetable[i])
           localStorage.setItem(i,timetable[i])
           }});
       })
       // STORED ITEMS DONE
       
+
+      //CLEAR ALL
+      $("#clear").click(function(){
+        $(".form-control").each(function(index) {
+        timetable[index] = $(this).val();
+        $(this).text(localStorage[index])
+        for (i in timetable){
+          localStorage.clear()
+          window.location.href = "index.html";
+          }});
+      })
+      //CLEAR ALL DONE
     </script>
   </body>
 </html>

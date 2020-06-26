@@ -32,7 +32,13 @@ textarea{
   /* padding: 5%; */
   border-radius: 15px;
   margin: 10%;
+  margin-bottom: 2%;
 
+}
+#clear{
+  margin-left: 40%;
+  text-align: center;
+  background-color: lightblue;
 }
 .list-group-item{
   height: 5rem;
