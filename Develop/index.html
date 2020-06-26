@@ -100,22 +100,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+      var timetable = {};
+      //******** ADD FROM STORAGE HERE
+      $(".form-control").each(function(index) {
+        var setValue = index.value;
+        var storedItem = localStorage.getItem(index)
+        $(this).val(storedItem);
 
+      });
+      //******** DONE ADDING FROM STORAGE
       console.log(moment());
       var today = moment().format("dddd, MMMM Do YYYY");
       console.log(today)
       $("#currentDay").append(today)
       console.log(moment().format("HH"))
-      var timetable = {};
-      
+      // Button to store input items
       $(".btn").click(function(){
         $(".form-control").each(function(index) {
         timetable[index] = $(this).val();
+        $(this).text(localStorage[index])
         for (i in timetable){
+          console.log(timetable[i])
           localStorage.setItem(i,timetable[i])
-      }});
+          // var getInput = localStorage.getItem(i)
+          // $(this).append(getInput)
+          }});
       })
-      localStorage.getItem()
+      
     </script>
   </body>
 </html>
