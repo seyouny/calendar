@@ -74,7 +74,7 @@
     </div>
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg" value="3">03 PM</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg" value="3">11 PM</span>
       </div>
       <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
       <a href="#" class="btn btn-primary">Save</a>
@@ -114,9 +114,11 @@
       $(".input-group-text").each(function(index) {
         storedTime[index] = $(this).text();
         var strTime = storedTime[index][0] + storedTime[index][1];
-        if (moment().format("hh")=== strTime){
-          console.log("yes")
-        }
+        if (moment().format("hh A") === storedTime[index]){
+          $(this).css("background-color","pink");
+
+
+          }
       });
       console.log(moment().format("hh"))
       //***** DONE CHANGING COLORS
