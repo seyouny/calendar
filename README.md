@@ -30,17 +30,30 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+### Built With
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## Review
 
-You are required to submit the following for review:
+### Deployed Link
 
-* The URL of the deployed application.
+https://seyouny.github.io/calendar/
+https://github.com/seyouny/calendar/
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+### Authors
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Seyoung Yoon
+
+- [Link to Github](https://github.com/seyouny)
+- [Link to LinkedIn](https://www.linkedin.com/in/stacey-yoon-bbaa7413a/)
+
+See also the list of contributors who participated in this project.
+
+### License
+This project is licensed under the MIT License
+
+###Acknowledgments
+
+Jerome, Manuel, and every partner I've had the pleasure of working with.
